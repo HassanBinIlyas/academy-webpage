@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <div  id="logo">
+        <div id="logo">
             <a href="../index.html"><img src="../assets/images/logo.png" alt="Logo"></a>
         </div>
         <nav>
@@ -24,65 +26,55 @@
         <img id="menu" src="../assets/images/menu-icon.png" alt="Menu">
     </header>
 
-    <section class="hero">
-        <div class="overlay">
-            <h1>Aim, Reach, Zenith</h1>
-            <p>Modern Tuition & Learning Platform</p>
-            <button><b>JOIN NOW</b></button>
-        </div>
-    </section>
-    <section class="about">
-        <div class="text">
-            <h2>Why Choose Us</h2>
-            <p>We provide quality education with experienced teachers and modern techniques.</p>
-        </div>
 
-        <div class="cards">
-            <div class="card">
-                <h3>500+</h3>
-                <p>Students</p>
+    <main>
+        <article class="hero-sec">
+            <div class="hero-overlay">
+                <h1>Contact and Enrollment</h1>
+                <p>Have a question or ready to enroll? <br> Send us your details and we'll get back to you with course
+                    and schedule information.</p>
+                <a href="#contact-form"><button><b>SCROLL DOWN</b></button></a>
             </div>
-            <div class="card">
-                <h3>20+</h3>
-                <p>Teachers</p>
-            </div>
-            <div class="card">
-                <h3>95%</h3>
-                <p>Success Rate</p>
-            </div>
-        </div>
-    </section>
-    <section class="edu">
-        <h2>Education is the Key to Success</h2>
-    </section>
-    <section class="courses" id="courses">
-        <h2>Our Courses</h2>
-        <div class="grid">
-            <div class="box">Mathematics</div>
-            <div class="box">Physics</div>
-            <div class="box">Chemistry</div>
-            <div class="box">English</div>
-            <div class="box">Computer</div>
-            <div class="box">Biology</div>
-            <div class="box">Statistics</div>
-            <div class="box">Islamic Studies</div>
-            <div class="box">Pakistan Studies</div>
-            <div class="box">Commerce</div>
-            <div class="box">Accounting</div>
-            <div class="box">Arts & Crafts</div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button>Submit</button>
-        </form>
-    </section>
-    
+        </article>
+
+        <article id="contact-form">
+            <h2>Get in Touch</h2>
+
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Phone (optional)">
+                <label>Interested Course (optional)</label>
+                <select>
+                    <option>Select a course</option>
+                    <option>Mathematics for Beginners</option>
+                    <option>Physics Essentials</option>
+                    <option>Chemistry Fundamentals</option>
+                    <option>English Communication</option>
+                    <option>Computer Science Basics</option>
+                    <option>Biology Insights</option>
+                    <option>Statistics & Data</option>
+                    <option>Islamic Studies</option>
+                    <option>Pakistan Studies</option>
+                    <option>Commerce</option>
+                    <option>Accounting</option>
+                    <option>Arts & Crafts</option>
+                </select>
+
+                <textarea placeholder="Your message" rows="6"></textarea>
+
+                <div class="form-actions">
+                    <button class="r-btn" type="reset">Reset</button>
+                    <button class="s-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </article>
+    </main>
+
+
     <footer>
         <p>© 2026 ARZ Academy</p>
     </footer>
 </body>
+
 </html>
