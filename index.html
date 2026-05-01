@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARZ Academy</title>
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <div id="logo">
-            <img src="assets/images/logo.png" alt="Logo">
+        <div  id="logo">
+            <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo"></a>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#courses">Courses</a>
-            <a href="#contact">Contact</a>
+            <a href="./index.html">Home</a>
+            <a href="./pages/courses.html">Courses</a>
+            <a href="./pages/about.html">About</a>
+            <a href="./pages/contact.html">Contact</a>
         </nav>
-        <img id="menu" src="https://img.icons8.com/?size=48&id=0mAtpPoNoAEd&format=png" alt="Menu">
+        <img id="menu" src="./assets/images/menu-icon.png" alt="Menu">
     </header>
-    <section class="hero">
-        <div class="overlay">
+
+    <section class="hero-sec">
+        <div class="hero-overlay">
             <h1>Learn Skills That Matter</h1>
             <p>Modern Tuition & Learning Platform</p>
-            <button><b>JOIN NOW</b></button>
+            <a href="./pages/contact.html"><button><b>JOIN NOW</b></button></a>
         </div>
     </section>
-    <section class="about">
-        <div class="text">
+    <section class="about-sec">
+        <div class="about-text">
             <h2>Why Choose Us</h2>
             <p>We provide quality education with experienced teachers and modern techniques.</p>
         </div>
 
-        <div class="cards">
+        <div class="about-cards">
             <div class="card">
                 <h3>500+</h3>
                 <p>Students</p>
@@ -47,36 +54,20 @@
             </div>
         </div>
     </section>
-    <section class="edu">
+    <section class="edu-banner">
         <h2>Education is the Key to Success</h2>
     </section>
-    <section class="courses" id="courses">
-        <h2>Our Courses</h2>
-        <div class="grid">
-            <div class="box">Mathematics</div>
-            <div class="box">Physics</div>
-            <div class="box">Chemistry</div>
-            <div class="box">English</div>
-            <div class="box">Computer</div>
-            <div class="box">Biology</div>
-            <div class="box">Statistics</div>
-            <div class="box">Islamic Studies</div>
-            <div class="box">Pakistan Studies</div>
-            <div class="box">Commerce</div>
-            <div class="box">Accounting</div>
-            <div class="box">Arts & Crafts</div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button>Submit</button>
-        </form>
+
+    <section class="review-sec">
+      <h2>What Students Say</h2>
+      <div class="review">
+        <blockquote>"ARZ Academy helped me improve my grades and confidence."</blockquote>
+        <cite>— Abdullah, Student</cite>
+      </div>
     </section>
     <footer>
         <p>© 2026 ARZ Academy</p>
     </footer>
 </body>
+
 </html>

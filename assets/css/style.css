@@ -3,85 +3,103 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #000;
+
+:root {
+    --bg: #000;
+    --glass: #000000ae;
+    --blur: blur(10px);
+    --bgf: saturate(50%);
+    --hs: 0 0 15px #ffffffae;
+}
+
+html,
+body {
+    font-family: "Comfortaa", sans-serif;
+    background: var(--bg);
     color: #fff;
 }
+
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 15px 50px;
+    padding: 25px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(15px);
-    background: #000000ae;
+    backdrop-filter: var(--blur);
+    background: var(--glass);
     border-bottom: 1px solid #ffffffae;
     z-index: 1000;
 }
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 #logo img {
-    width: 40px;
-    filter: drop-shadow(0 0 10px #ffffffae);
+    height: 40px;
+    filter: drop-shadow(0 0 25px #000);
 }
-header a {
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
     position: relative;
     color: #fff;
-    margin-left: 25px;
     text-decoration: none;
     font-size: 15px;
 }
-header a::after {
-    content: '';
+
+nav a::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: -5px;
     width: 0%;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffffae;
     transition: 0.5s;
 }
-header a:hover {
-    text-shadow: 0 0 15px #fff;
-}
-header a:hover::after {
+
+nav a:hover::after {
     width: 100%;
 }
+
 #menu {
     display: none;
-    width: 25px;
-    cursor: pointer;
+    width: 30px;
 }
-.hero {
+
+.hero-sec {
     height: 100vh;
     background: url('../images/bg1.jpg') center/cover fixed;
+    filter: var(--bgf);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.overlay {
+
+.hero-overlay {
     text-align: center;
     padding: 50px;
     background: #000000ae;
+    border: 1px solid #ffffffae;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: var(--blur);
 }
-.overlay h1 {
+
+.hero-overlay h1 {
     font-size: 55px;
-    text-shadow: 0 0 15px #ffffffae;
-    
+    text-shadow: var(--hs);
+
 }
-.overlay p {
+
+.hero-overlay p {
     color: #fff;
     margin-top: 10px;
 }
-.overlay button {
+
+.hero-overlay button {
     margin-top: 25px;
     padding: 15px 35px;
     border: none;
@@ -91,7 +109,8 @@ header a:hover::after {
     position: relative;
     overflow: hidden;
 }
-.overlay button::before {
+
+.hero-overlay button::before {
     content: '';
     position: absolute;
     width: 200%;
@@ -101,40 +120,57 @@ header a:hover::after {
     background: linear-gradient(120deg, transparent, #ffffffae, transparent);
     transition: 0.5s;
 }
-.overlay button:hover::before {
+
+.hero-overlay button:hover::before {
     left: 100%;
 }
 
-.overlay button:hover {
-    box-shadow: 0 0 25px #fff;
-}
-.about {
-    padding: 100px 50px;
+
+.about-sec {
+    display: flex;
+    background: url('../images/bg3.jpg') center/cover;
+    filter: var(--bgf);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
     text-align: center;
 }
-.about h2 {
-    margin-bottom: 20px;
-}
-.cards {
+
+.about-text {
     display: flex;
-    gap: 25px;
-    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
+
+.about-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .card {
     flex: 1;
+    width: 25vw;
     padding: 30px;
     background: #000000ae;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: var(--blur);
     border: 1px solid #ffffffae;
     transition: 0.5s;
     position: relative;
     overflow: hidden;
 }
+
 .card:hover {
     transform: translateY(-10px) scale(1.1);
     box-shadow: 0 20px 40px #ffffffae;
 }
+
 .card::before {
     content: '';
     position: absolute;
@@ -145,30 +181,57 @@ header a:hover::after {
     background: linear-gradient(120deg, transparent, #ffffffae, transparent, #ffffffae, transparent, transparent);
     transition: 0.5s;
 }
+
 .card:hover::before {
     left: 100%;
 }
-.edu {
+
+.edu-banner {
     height: 300px;
     background: url('../images/bg2.jpg') center/cover fixed;
+    filter: var(--bgf);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     color: #fff;
     text-align: center;
-    text-shadow: 0 0 25px #000000;;
+    text-shadow: var(--hs);
 }
+
+.review-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+}
+
+.review {
+    display: grid;
+    gap: 15px
+}
+
+.review blockquote {
+    background: #ffffff22;
+    padding: 20px;
+    border-radius: 10px;
+    color: #d3d3d3;
+}
+
 .courses {
     padding: 100px 50px;
     text-align: center;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 50px;
 }
+
 .box {
     flex: 1;
     padding: 30px;
@@ -180,6 +243,7 @@ header a:hover::after {
     position: relative;
     overflow: hidden;
 }
+
 .box::after {
     content: '';
     position: absolute;
@@ -190,21 +254,26 @@ header a:hover::after {
     transition: 0.5s;
     background: linear-gradient(120deg, transparent, #ffffffae, transparent, #ffffffae, transparent, transparent);
 }
+
 .box:hover {
     transform: translateY(-10px) scale(1.1);
     box-shadow: 0 20px 40px #ffffffae;
 }
+
 .box:hover::after {
     left: 100%;
     background: linear-gradient(120deg, transparent, #ffffffae, transparent);
 }
+
 .contact {
     padding: 100px 20px;
     text-align: center;
 }
+
 .contact h2 {
     margin-bottom: 20px;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -212,54 +281,70 @@ form {
     max-width: 350px;
     margin: auto;
 }
-input, textarea {
+
+input,
+textarea {
     padding: 12px;
     background: #07121f;
     border: 1px solid #808080;
     color: white;
     border-radius: 10px;
 }
+
 textarea {
     resize: none;
     height: 100px;
 }
-input:focus, textarea:focus {
+
+input:focus,
+textarea:focus {
     border-color: #fff;
     outline: none;
 }
+
 form button {
     padding: 5px 10px;
     border-radius: 10px;
 }
+
 form button:hover {
     box-shadow: 0 0 15px #ffffffae;
 }
+
 footer {
-    padding: 20px;
+    border-top: 1px solid #ffffffae;
+    padding: 50px 100px;
     text-align: center;
     background: #000;
     color: #fff;
 }
+
 @media(max-width: 750px) {
     header {
         padding: 15px 20px;
     }
+
     nav {
         display: none;
     }
+
     #menu {
         display: block;
     }
-    .cards {
+
+    .about-cards {
         flex-direction: column;
     }
+
     .grid {
         grid-template-columns: 1fr;
     }
-    .overlay h1 {
+
+    .hero-overlay h1 {
         font-size: 32px;
     }
-    .overlay {
+
+    .hero-overlay {
         margin: 0 20px;
         padding: 25px;
     }
